@@ -29,10 +29,24 @@
     <div class="row" id="trainSchedule">
         <div class="col-md-12">
             <div class="card">
-                <div class="card-header">
+                <div class="card-header h4">
                     Train Schedule
                 </div>
                 <div class="card-body">
+                        <table class="table">
+                                <thead>
+                                  <tr>
+                                    <th class="h5" scope="col">Train Name</th>
+                                    <th class="h5" scope="col">Destination</th>
+                                    <th class="h5" scope="col">Frequency (min)</th>
+                                    <th class="h5" scope="col">Next Arrival</th>
+                                    <th class="h5" scope="col">Minutes Away</th>
+                                  </tr>
+                                </thead>
+                                <tbody id="tableInfo">
+                                    
+                                </tbody>
+                              </table>
 
                 </div>
             </div>
@@ -43,7 +57,7 @@
         <div class="col-md-12">
             <div class="card">
 
-                <div class="card-header">
+                <div class="card-header h4">
                     Add a Train
                 </div>
 
@@ -78,5 +92,9 @@
         </div>
     </div>
 </div>
+<script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+<script src="https://www.gstatic.com/firebasejs/5.0.2/firebase.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.20.1/moment.min.js"></script>
+<script src="assets/logic/javascript.js"></script>
 </body>
 </html>
