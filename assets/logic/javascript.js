@@ -30,37 +30,22 @@
 
   database.ref().on("child_added", function(snap){
 
-      var fTime = snap.val().frequency;
+    var fTime = snap.val().frequency;
 
-      var sTime = snap.val().firstTrain;
+    var sTime = snap.val().firstTrain;
 
-    var tFrequency = 17;
-
-    var firstTime = "03:00";
-
-    // First Time (pushed back 1 year to make sure it comes before current time)
     var firstTimeConverted = moment(sTime, "HH:mm").subtract(1, "years");
-    console.log(firstTimeConverted);
 
-    // Current Time
     var currentTime = moment();
-    console.log("CURRENT TIME: " + moment(currentTime).format("hh:mm"));
 
-    // Difference between the times
     var diffTime = moment().diff(moment(firstTimeConverted), "minutes");
-    console.log("DIFFERENCE IN TIME: " + diffTime);
 
-    // Time apart (remainder)
     var tRemainder = diffTime % fTime;
-    console.log(tRemainder);
 
-    // Minute Until Train
     var tMinutesTillTrain = fTime - tRemainder;
-    console.log("MINUTES TILL TRAIN: " + tMinutesTillTrain);
 
-    // Next Train
     var nextTrain = moment().add(tMinutesTillTrain, "minutes");
-    console.log("ARRIVAL TIME: " + moment(nextTrain).format("hh:mm"));
+
 
       $("#tableInfo").append(
         "<tr>"
