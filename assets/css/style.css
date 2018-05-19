@@ -1,0 +1,35 @@
+#header {
+    background-color: rgb(29,29,29);
+    color: greenyellow;
+    border-radius: 10px;
+    text-align: center;
+}
+
+body {
+    font-family: 'Inconsolata', monospace;
+    background-color: black;
+}
+
+.card-header {
+    background-color: rgb(29, 29, 29);
+    color: greenyellow;
+}
+
+.card {
+    margin-top: 20px;
+}
+
+.card-body {
+    background-color: rgb(60,60,60);
+    color: greenyellow;
+}
+
+#submit {
+    background-color: rgb(29, 29, 29);
+    color: greenyellow;
+}
+
+.form-control {
+    background-color: rgb(29, 29, 29);
+    color: greenyellow;
+}
